@@ -27,11 +27,6 @@ function askUser() {
         },
         {
             type: "input",
-            message: "Table of contents?",
-            name: "tabC"
-        },
-        {
-            type: "input",
             message: "How to installation?",
             name: "install"
         },
@@ -112,11 +107,17 @@ return newBadge;
 
 function generateReadMe(info, userPic, badges){
 return `
-# ${info.projectN}
+# ${info.projectN} ${badges}
 # Description
 ${info.desc}
 # Table of Contents
-${info.tabC}
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Test](#Tests)
+* [Question](#Questions)
+* [Contact](#Contact)
 # Installation
 ${info.install}
 # Usage
@@ -131,11 +132,12 @@ ${info.tests}
 ${info.qest}
 # Contact
 <img src="${userPic}" alt="userPic" width="150" height="150">
-${info.userEmail} ${badges}
+
+${info.userEmail} 
 `
 } // END of generateReadme
 
-async function buildIt(){
+async function generateIt(){
     try{
 
         const userInfo = await askUser(); 
@@ -152,4 +154,4 @@ async function buildIt(){
     }
 }// END of async
 
-buildIt();
+generateIt();
