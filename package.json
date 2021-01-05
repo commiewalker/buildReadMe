@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/commiewalker/buildReadMe#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "gh-badges": "^2.2.1",
     "inquirer": "^7.1.0",
     "npm-email": "^3.2.0"
